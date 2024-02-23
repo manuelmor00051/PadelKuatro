@@ -16,7 +16,13 @@ struct MainCoordinatorView: View {
     // MARK: - Body
     
     var body: some View {
-        // TODO: - Get splash
+        getSplashView()
+    }
+
+    func getSplashView() -> some View {
+        NavigationView {
+            SplashView(viewModel: coordinator.splashViewModel)
+        }
     }
 }
 

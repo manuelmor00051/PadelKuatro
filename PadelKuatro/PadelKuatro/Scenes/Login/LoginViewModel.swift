@@ -5,4 +5,8 @@
 //  Created by manuel.moreno.local on 24/2/24.
 //
 
-import Foundation
+import SwiftUI
+
+class LoginViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject {
+    
+}

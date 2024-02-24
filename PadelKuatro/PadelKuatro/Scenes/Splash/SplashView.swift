@@ -16,6 +16,8 @@ struct SplashView: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .ignoresSafeArea()
+        }.onAppear {
+            viewModel.onAppear()
         }
     }
 }

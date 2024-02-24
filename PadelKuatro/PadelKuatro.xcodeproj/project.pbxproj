@@ -51,6 +51,7 @@
 		3BD7B74D2B89DA2F005AACB0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7B74C2B89DA2F005AACB0 /* Constants.swift */; };
 		3BD7B7512B89DD7A005AACB0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7B7502B89DD7A005AACB0 /* LoginView.swift */; };
 		3BD7B7532B89DD8D005AACB0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7B7522B89DD8D005AACB0 /* LoginViewModel.swift */; };
+		3BD7B7552B89E3B2005AACB0 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7B7542B89E3B2005AACB0 /* View+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		3BD7B74C2B89DA2F005AACB0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3BD7B7502B89DD7A005AACB0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3BD7B7522B89DD8D005AACB0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		3BD7B7542B89E3B2005AACB0 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				3BD7B7462B893068005AACB0 /* String+.swift */,
+				3BD7B7542B89E3B2005AACB0 /* View+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				3BD7B74D2B89DA2F005AACB0 /* Constants.swift in Sources */,
 				3BD7B7312B892913005AACB0 /* BaseViewModel.swift in Sources */,
 				3BD7B7362B892A0C005AACB0 /* MainCoordinator.swift in Sources */,
+				3BD7B7552B89E3B2005AACB0 /* View+.swift in Sources */,
 				3BD7B7532B89DD8D005AACB0 /* LoginViewModel.swift in Sources */,
 				3BD7B7512B89DD7A005AACB0 /* LoginView.swift in Sources */,
 				3BD7B7332B892951005AACB0 /* BaseCoordinator.swift in Sources */,

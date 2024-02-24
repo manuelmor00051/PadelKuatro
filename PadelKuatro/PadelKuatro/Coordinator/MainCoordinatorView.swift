@@ -22,7 +22,14 @@ struct MainCoordinatorView: View {
     func getSplashView() -> some View {
         NavigationView {
             SplashView(viewModel: coordinator.splashViewModel)
+                .navigation(isActive: $coordinator.loginIsActive) {
+                    getLoginView()
+                }
         }
+    }
+
+    func getLoginView() -> some View {
+        LoginView(viewModel: coordinator.loginViewModel)
     }
 }
 

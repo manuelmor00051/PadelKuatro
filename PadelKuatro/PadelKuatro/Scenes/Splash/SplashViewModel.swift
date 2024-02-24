@@ -10,8 +10,8 @@ import SwiftUI
 class SplashViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject {
     
     func onAppear() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.Defaults.splashTimer) {
-            // TODO: - Navigation to Login
+        DispatchQueue.main.asyncAfter(deadline: .now() + Constants.Defaults.splashTimer) { [weak self] in
+            self?.getCoordinator()?.navigateToLogin()
         }
     }
 }

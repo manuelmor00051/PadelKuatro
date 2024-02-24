@@ -49,6 +49,8 @@
 		3BD7B7472B893068005AACB0 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7B7462B893068005AACB0 /* String+.swift */; };
 		3BD7B74B2B8931D8005AACB0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BD7B74A2B8931C0005AACB0 /* Images.xcassets */; };
 		3BD7B74D2B89DA2F005AACB0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7B74C2B89DA2F005AACB0 /* Constants.swift */; };
+		3BD7B7512B89DD7A005AACB0 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7B7502B89DD7A005AACB0 /* LoginView.swift */; };
+		3BD7B7532B89DD8D005AACB0 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BD7B7522B89DD8D005AACB0 /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +70,8 @@
 		3BD7B7462B893068005AACB0 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
 		3BD7B74A2B8931C0005AACB0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3BD7B74C2B89DA2F005AACB0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3BD7B7502B89DD7A005AACB0 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3BD7B7522B89DD8D005AACB0 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,8 +189,8 @@
 		3BD7B7392B892AC0005AACB0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				3BD7B73A2B892B65005AACB0 /* SplashView.swift */,
-				3BD7B73C2B892B7F005AACB0 /* SplashViewModel.swift */,
+				3BD7B74F2B89DD52005AACB0 /* Login */,
+				3BD7B74E2B89DCD5005AACB0 /* Splash */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -216,6 +220,24 @@
 				3BD7B74C2B89DA2F005AACB0 /* Constants.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		3BD7B74E2B89DCD5005AACB0 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				3BD7B73A2B892B65005AACB0 /* SplashView.swift */,
+				3BD7B73C2B892B7F005AACB0 /* SplashViewModel.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		3BD7B74F2B89DD52005AACB0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3BD7B7502B89DD7A005AACB0 /* LoginView.swift */,
+				3BD7B7522B89DD8D005AACB0 /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +354,8 @@
 				3BD7B74D2B89DA2F005AACB0 /* Constants.swift in Sources */,
 				3BD7B7312B892913005AACB0 /* BaseViewModel.swift in Sources */,
 				3BD7B7362B892A0C005AACB0 /* MainCoordinator.swift in Sources */,
+				3BD7B7532B89DD8D005AACB0 /* LoginViewModel.swift in Sources */,
+				3BD7B7512B89DD7A005AACB0 /* LoginView.swift in Sources */,
 				3BD7B7332B892951005AACB0 /* BaseCoordinator.swift in Sources */,
 				3BD7B73D2B892B7F005AACB0 /* SplashViewModel.swift in Sources */,
 			);

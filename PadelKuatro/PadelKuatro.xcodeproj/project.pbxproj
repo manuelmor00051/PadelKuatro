@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B6E04C62B988D62005B4357 /* Spanish.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6E04C82B988D62005B4357 /* Spanish.strings */; };
 		3B73D77E2B8917220082DEE3 /* PadelKuatroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B73D77D2B8917220082DEE3 /* PadelKuatroApp.swift */; };
 		3B73D7822B8917230082DEE3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B73D7812B8917230082DEE3 /* Colors.xcassets */; };
 		3B73D7852B8917230082DEE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B73D7842B8917230082DEE3 /* Preview Assets.xcassets */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B6E04C72B988D62005B4357 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Spanish.strings; sourceTree = "<group>"; };
 		3B73D77A2B8917220082DEE3 /* PadelKuatro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PadelKuatro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B73D77D2B8917220082DEE3 /* PadelKuatroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadelKuatroApp.swift; sourceTree = "<group>"; };
 		3B73D7812B8917230082DEE3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B6E04C32B988CCA005B4357 /* Localizable */ = {
+			isa = PBXGroup;
+			children = (
+				3B6E04C82B988D62005B4357 /* Spanish.strings */,
+			);
+			path = Localizable;
+			sourceTree = "<group>";
+		};
 		3B73D7712B8917220082DEE3 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +211,7 @@
 		3BD7B7482B8930BE005AACB0 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				3B6E04C32B988CCA005B4357 /* Localizable */,
 				3BD7B7452B893047005AACB0 /* Extensions */,
 				3BD7B74C2B89DA2F005AACB0 /* Constants.swift */,
 			);
@@ -278,6 +289,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 3B73D7712B8917220082DEE3;
 			packageReferences = (
@@ -298,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B73D7852B8917230082DEE3 /* Preview Assets.xcassets in Resources */,
+				3B6E04C62B988D62005B4357 /* Spanish.strings in Resources */,
 				3BD7B74B2B8931D8005AACB0 /* Images.xcassets in Resources */,
 				3B73D7822B8917230082DEE3 /* Colors.xcassets in Resources */,
 				3BD7B6F52B891AA3005AACB0 /* GoogleService-Info.plist in Resources */,
@@ -325,6 +338,17 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3B6E04C82B988D62005B4357 /* Spanish.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B6E04C72B988D62005B4357 /* es */,
+			);
+			name = Spanish.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3B73D7862B8917230082DEE3 /* Debug */ = {

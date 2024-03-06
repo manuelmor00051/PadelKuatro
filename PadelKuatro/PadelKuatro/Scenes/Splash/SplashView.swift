@@ -12,10 +12,16 @@ struct SplashView: View {
 
     var body: some View {
         ZStack {
-            Image(.Images.splash)
+            Rectangle()
+                .fill(Color.white)
+                .ignoresSafeArea()
+            Image(.splash)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .ignoresSafeArea()
+        }
+        .onAppear {
+            viewModel.onAppear()
         }
     }
 }

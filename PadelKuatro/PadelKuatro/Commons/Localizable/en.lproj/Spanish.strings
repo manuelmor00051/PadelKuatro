@@ -1,0 +1,16 @@
+/* 
+  Spanish.strings
+  PadelKuatro
+
+  Created by manuel.moreno.local on 6/3/24.
+  
+*/
+
+// MARK: - Login Screen
+
+"login_title" = "Inicia Sesión";
+"login_email" = "Email";
+"login_password" = "Contraseña";
+"login_button_title" = "Iniciar Sesión";
+"login_register_button_title" = "Registrarse";
+"login_remember_password" = "¿Olvidaste tu contraseña?";

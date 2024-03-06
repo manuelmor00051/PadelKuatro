@@ -14,4 +14,8 @@ internal class DependencyInjector {
     func getSplashViewModel(coordinator: MainCoordinatorProtocol) -> SplashViewModel {
         SplashViewModel(coordinator: coordinator)
     }
+
+    func getLoginViewModel(coordinator: MainCoordinatorProtocol) -> LoginViewModel {
+        LoginViewModel(coordinator: coordinator)
+    }
 }

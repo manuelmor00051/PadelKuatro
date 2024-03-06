@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3B6E04C62B988D62005B4357 /* Spanish.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6E04C82B988D62005B4357 /* Spanish.strings */; };
+		3B6E04CD2B989925005B4357 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6E04CF2B989925005B4357 /* Localizable.strings */; };
+		3B7263752B9492A7008FCD90 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7263742B9492A7008FCD90 /* RoundedButton.swift */; };
 		3B73D77E2B8917220082DEE3 /* PadelKuatroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B73D77D2B8917220082DEE3 /* PadelKuatroApp.swift */; };
 		3B73D7822B8917230082DEE3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B73D7812B8917230082DEE3 /* Colors.xcassets */; };
 		3B73D7852B8917230082DEE3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B73D7842B8917230082DEE3 /* Preview Assets.xcassets */; };
@@ -55,7 +56,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3B6E04C72B988D62005B4357 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Spanish.strings; sourceTree = "<group>"; };
+		3B6E04CE2B989925005B4357 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		3B7263742B9492A7008FCD90 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		3B73D77A2B8917220082DEE3 /* PadelKuatro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PadelKuatro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B73D77D2B8917220082DEE3 /* PadelKuatroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadelKuatroApp.swift; sourceTree = "<group>"; };
 		3B73D7812B8917230082DEE3 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
@@ -117,9 +119,17 @@
 		3B6E04C32B988CCA005B4357 /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
-				3B6E04C82B988D62005B4357 /* Spanish.strings */,
+				3B6E04CF2B989925005B4357 /* Localizable.strings */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		3B7263732B949284008FCD90 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				3B7263742B9492A7008FCD90 /* RoundedButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 		3B73D7712B8917220082DEE3 = {
@@ -219,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				3B6E04C32B988CCA005B4357 /* Localizable */,
+				3B7263732B949284008FCD90 /* Buttons */,
 				3BD7B7452B893047005AACB0 /* Extensions */,
 				3BD7B74C2B89DA2F005AACB0 /* Constants.swift */,
 			);
@@ -309,12 +320,11 @@
 			};
 			buildConfigurationList = 3B73D7752B8917220082DEE3 /* Build configuration list for PBXProject "PadelKuatro" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = es;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
-				Base,
 				es,
+				Base,
 			);
 			mainGroup = 3B73D7712B8917220082DEE3;
 			packageReferences = (
@@ -335,7 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B73D7852B8917230082DEE3 /* Preview Assets.xcassets in Resources */,
-				3B6E04C62B988D62005B4357 /* Spanish.strings in Resources */,
+				3B6E04CD2B989925005B4357 /* Localizable.strings in Resources */,
 				3BD7B74B2B8931D8005AACB0 /* Images.xcassets in Resources */,
 				3B73D7822B8917230082DEE3 /* Colors.xcassets in Resources */,
 				3BD7B6F52B891AA3005AACB0 /* GoogleService-Info.plist in Resources */,
@@ -360,6 +370,7 @@
 				3BD7B7552B89E3B2005AACB0 /* View+.swift in Sources */,
 				3BD7B7532B89DD8D005AACB0 /* LoginViewModel.swift in Sources */,
 				3BD7B7512B89DD7A005AACB0 /* LoginView.swift in Sources */,
+				3B7263752B9492A7008FCD90 /* RoundedButton.swift in Sources */,
 				3BD7B7332B892951005AACB0 /* BaseCoordinator.swift in Sources */,
 				3BD7B73D2B892B7F005AACB0 /* SplashViewModel.swift in Sources */,
 			);
@@ -368,12 +379,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3B6E04C82B988D62005B4357 /* Spanish.strings */ = {
+		3B6E04CF2B989925005B4357 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				3B6E04C72B988D62005B4357 /* es */,
+				3B6E04CE2B989925005B4357 /* es */,
 			);
-			name = Spanish.strings;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -514,7 +525,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -544,7 +555,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

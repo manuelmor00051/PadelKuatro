@@ -10,6 +10,7 @@ import Foundation
 extension String {
     enum Images {
         static let splash = "Splash"
+        static let ground = "Ground"
     }
 
     var localized: String {

@@ -8,5 +8,6 @@
 import SwiftUI
 
 class LoginViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject {
-    
+    @Published var email: String = ""
+    @Published var password: String = ""
 }

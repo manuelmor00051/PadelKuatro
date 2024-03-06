@@ -16,9 +16,15 @@ struct MainCoordinatorView: View {
     // MARK: - Body
     
     var body: some View {
-        getSplashView()
+        if coordinator.registerIsActive {
+            getRegisterView()
+        } else if coordinator.loginIsActive {
+            getLoginView()
+        } else {
+            getSplashView()
+        }
     }
-
+    
     func getSplashView() -> some View {
         NavigationView {
             SplashView(viewModel: coordinator.splashViewModel)
@@ -30,6 +36,10 @@ struct MainCoordinatorView: View {
 
     func getLoginView() -> some View {
         LoginView(viewModel: coordinator.loginViewModel)
+    }
+
+    func getRegisterView() -> some View {
+        RegisterView(viewModel: coordinator.registerViewModel)
     }
 }
 

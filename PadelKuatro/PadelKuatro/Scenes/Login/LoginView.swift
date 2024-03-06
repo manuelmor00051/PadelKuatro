@@ -61,7 +61,7 @@ struct LoginView: View {
                     }
                     .buttonStyle(RoundedButton(color: Constants.Colors.purpleButton))
                     Button("login_register_button_title".localized) {
-
+                        viewModel.navigateToRegister()
                     }
                     .buttonStyle(RoundedButton(color: Color.red))
                     Button {

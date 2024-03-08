@@ -10,6 +10,7 @@ import SwiftUI
 protocol MainCoordinatorProtocol: BaseCoordinatorProtocol {
     func navigateToLogin()
     func navigateToRegister()
+    func navigateToRememberPassword()
 }
 
 class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
@@ -19,6 +20,7 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
     @Published private(set) var splashViewModel: SplashViewModel!
     @Published private(set) var loginViewModel: LoginViewModel!
     @Published private(set) var registerViewModel: RegisterViewModel!
+    @Published private(set) var rememberPasswordViewModel: RememberPasswordViewModel!
 
     @Published var loginIsActive: Bool = false {
         didSet {
@@ -32,6 +34,14 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
         didSet {
             if !registerIsActive {
                 registerViewModel = nil
+            }
+        }
+    }
+
+    @Published var rememberPasswordIsActive: Bool = false {
+        didSet {
+            if !rememberPasswordIsActive {
+                rememberPasswordViewModel = nil
             }
         }
     }
@@ -53,11 +63,20 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
         loginViewModel = DependencyInjector.shared.getLoginViewModel(coordinator: self)
         loginIsActive = true
         registerIsActive = false
+        rememberPasswordIsActive = false
     }
 
     func navigateToRegister() {
         registerViewModel = DependencyInjector.shared.getRegisterViewModel(coordinator: self)
         registerIsActive = true
+        loginIsActive = false
+        rememberPasswordIsActive = false
+    }
+
+    func navigateToRememberPassword() {
+        rememberPasswordViewModel = DependencyInjector.shared.getRememberPasswordViewModel(coordinator: self)
+        rememberPasswordIsActive = true
+        registerIsActive = false
         loginIsActive = false
     }
 }

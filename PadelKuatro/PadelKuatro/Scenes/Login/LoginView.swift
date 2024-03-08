@@ -65,7 +65,7 @@ struct LoginView: View {
                     }
                     .buttonStyle(RoundedButton(color: Color.red))
                     Button {
-                        //TODO: -
+                        viewModel.navigateToRememberPassword()
                     } label: {
                         Text("login_remember_password".localized)
                             .fontWeight(.bold)

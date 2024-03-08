@@ -10,6 +10,8 @@
 		3B6E04CD2B989925005B4357 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6E04CF2B989925005B4357 /* Localizable.strings */; };
 		3B6E04D22B98F173005B4357 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E04D12B98F173005B4357 /* RegisterView.swift */; };
 		3B6E04D42B98F198005B4357 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E04D32B98F198005B4357 /* RegisterViewModel.swift */; };
+		3B6E04DD2B9B8208005B4357 /* RememberPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E04DC2B9B8208005B4357 /* RememberPasswordView.swift */; };
+		3B6E04E12B9B823A005B4357 /* RememberPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E04E02B9B823A005B4357 /* RememberPasswordViewModel.swift */; };
 		3B7263752B9492A7008FCD90 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7263742B9492A7008FCD90 /* RoundedButton.swift */; };
 		3B73D77E2B8917220082DEE3 /* PadelKuatroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B73D77D2B8917220082DEE3 /* PadelKuatroApp.swift */; };
 		3B73D7822B8917230082DEE3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B73D7812B8917230082DEE3 /* Colors.xcassets */; };
@@ -61,6 +63,8 @@
 		3B6E04CE2B989925005B4357 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B6E04D12B98F173005B4357 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		3B6E04D32B98F198005B4357 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		3B6E04DC2B9B8208005B4357 /* RememberPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberPasswordView.swift; sourceTree = "<group>"; };
+		3B6E04E02B9B823A005B4357 /* RememberPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberPasswordViewModel.swift; sourceTree = "<group>"; };
 		3B7263742B9492A7008FCD90 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		3B73D77A2B8917220082DEE3 /* PadelKuatro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PadelKuatro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B73D77D2B8917220082DEE3 /* PadelKuatroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadelKuatroApp.swift; sourceTree = "<group>"; };
@@ -135,6 +139,15 @@
 				3B6E04D32B98F198005B4357 /* RegisterViewModel.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		3B6E04DB2B9B81E9005B4357 /* RememberPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				3B6E04DC2B9B8208005B4357 /* RememberPasswordView.swift */,
+				3B6E04E02B9B823A005B4357 /* RememberPasswordViewModel.swift */,
+			);
+			path = RememberPasswordView;
 			sourceTree = "<group>";
 		};
 		3B7263732B949284008FCD90 /* Buttons */ = {
@@ -214,6 +227,7 @@
 		3BD7B7392B892AC0005AACB0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3B6E04DB2B9B81E9005B4357 /* RememberPasswordView */,
 				3B6E04D02B98F158005B4357 /* Register */,
 				3BD7B74F2B89DD52005AACB0 /* Login */,
 				3BD7B74E2B89DCD5005AACB0 /* Splash */,
@@ -379,12 +393,14 @@
 				3B6E04D42B98F198005B4357 /* RegisterViewModel.swift in Sources */,
 				3B73D77E2B8917220082DEE3 /* PadelKuatroApp.swift in Sources */,
 				3BD7B7382B892A82005AACB0 /* MainCoordinatorView.swift in Sources */,
+				3B6E04E12B9B823A005B4357 /* RememberPasswordViewModel.swift in Sources */,
 				3BD7B74D2B89DA2F005AACB0 /* Constants.swift in Sources */,
 				3B6E04D22B98F173005B4357 /* RegisterView.swift in Sources */,
 				3BD7B7312B892913005AACB0 /* BaseViewModel.swift in Sources */,
 				3BD7B7362B892A0C005AACB0 /* MainCoordinator.swift in Sources */,
 				3BD7B7552B89E3B2005AACB0 /* View+.swift in Sources */,
 				3BD7B7532B89DD8D005AACB0 /* LoginViewModel.swift in Sources */,
+				3B6E04DD2B9B8208005B4357 /* RememberPasswordView.swift in Sources */,
 				3BD7B7512B89DD7A005AACB0 /* LoginView.swift in Sources */,
 				3B7263752B9492A7008FCD90 /* RoundedButton.swift in Sources */,
 				3BD7B7332B892951005AACB0 /* BaseCoordinator.swift in Sources */,

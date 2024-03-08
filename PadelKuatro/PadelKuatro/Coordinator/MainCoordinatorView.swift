@@ -20,6 +20,8 @@ struct MainCoordinatorView: View {
             getRegisterView()
         } else if coordinator.loginIsActive {
             getLoginView()
+        } else if coordinator.rememberPasswordIsActive {
+            getRememberPasswordView()
         } else {
             getSplashView()
         }
@@ -40,6 +42,10 @@ struct MainCoordinatorView: View {
 
     func getRegisterView() -> some View {
         RegisterView(viewModel: coordinator.registerViewModel)
+    }
+
+    func getRememberPasswordView() -> some View {
+        RememberPasswordView(viewModel: coordinator.rememberPasswordViewModel)
     }
 }
 

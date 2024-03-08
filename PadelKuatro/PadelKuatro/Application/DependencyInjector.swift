@@ -18,4 +18,8 @@ internal class DependencyInjector {
     func getLoginViewModel(coordinator: MainCoordinatorProtocol) -> LoginViewModel {
         LoginViewModel(coordinator: coordinator)
     }
+
+    func getRegisterViewModel(coordinator: MainCoordinatorProtocol) -> RegisterViewModel {
+        RegisterViewModel(coordinator: coordinator)
+    }
 }

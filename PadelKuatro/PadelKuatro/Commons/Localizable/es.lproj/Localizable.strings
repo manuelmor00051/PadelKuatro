@@ -23,3 +23,7 @@
 "register_confirm_password" = "Confirmar Contraseña";
 "register_register_button_title" = "Crear cuenta";
 
+// MARK: - RememberPassword Screen
+
+"rememberPassword_description" = "Pulse el botón Recuperar contraseña y le enviaremos a su email un correo con el enlace con los pasos a seguir para restablecer la contraseña.";
+

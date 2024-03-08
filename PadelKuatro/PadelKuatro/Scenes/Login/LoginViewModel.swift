@@ -14,4 +14,8 @@ class LoginViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject {
     func navigateToRegister() {
         getCoordinator()?.navigateToRegister()
     }
+
+    func navigateToRememberPassword() {
+        getCoordinator()?.navigateToRememberPassword()
+    }
 }

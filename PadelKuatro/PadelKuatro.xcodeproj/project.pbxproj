@@ -12,6 +12,7 @@
 		3B6E04D42B98F198005B4357 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E04D32B98F198005B4357 /* RegisterViewModel.swift */; };
 		3B6E04DD2B9B8208005B4357 /* RememberPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E04DC2B9B8208005B4357 /* RememberPasswordView.swift */; };
 		3B6E04E12B9B823A005B4357 /* RememberPasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E04E02B9B823A005B4357 /* RememberPasswordViewModel.swift */; };
+		3B71BE262BA9B47500A4C460 /* TermsAndConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B71BE252BA9B47500A4C460 /* TermsAndConditions.swift */; };
 		3B7263752B9492A7008FCD90 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B7263742B9492A7008FCD90 /* RoundedButton.swift */; };
 		3B73D77E2B8917220082DEE3 /* PadelKuatroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B73D77D2B8917220082DEE3 /* PadelKuatroApp.swift */; };
 		3B73D7822B8917230082DEE3 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B73D7812B8917230082DEE3 /* Colors.xcassets */; };
@@ -65,6 +66,7 @@
 		3B6E04D32B98F198005B4357 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		3B6E04DC2B9B8208005B4357 /* RememberPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberPasswordView.swift; sourceTree = "<group>"; };
 		3B6E04E02B9B823A005B4357 /* RememberPasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RememberPasswordViewModel.swift; sourceTree = "<group>"; };
+		3B71BE252BA9B47500A4C460 /* TermsAndConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditions.swift; sourceTree = "<group>"; };
 		3B7263742B9492A7008FCD90 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		3B73D77A2B8917220082DEE3 /* PadelKuatro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PadelKuatro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B73D77D2B8917220082DEE3 /* PadelKuatroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PadelKuatroApp.swift; sourceTree = "<group>"; };
@@ -150,6 +152,14 @@
 			path = RememberPasswordView;
 			sourceTree = "<group>";
 		};
+		3B71BE242BA9B45500A4C460 /* TermsAndConditions */ = {
+			isa = PBXGroup;
+			children = (
+				3B71BE252BA9B47500A4C460 /* TermsAndConditions.swift */,
+			);
+			path = TermsAndConditions;
+			sourceTree = "<group>";
+		};
 		3B7263732B949284008FCD90 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,6 +237,7 @@
 		3BD7B7392B892AC0005AACB0 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				3B71BE242BA9B45500A4C460 /* TermsAndConditions */,
 				3B6E04DB2B9B81E9005B4357 /* RememberPasswordView */,
 				3B6E04D02B98F158005B4357 /* Register */,
 				3BD7B74F2B89DD52005AACB0 /* Login */,
@@ -405,6 +416,7 @@
 				3B7263752B9492A7008FCD90 /* RoundedButton.swift in Sources */,
 				3BD7B7332B892951005AACB0 /* BaseCoordinator.swift in Sources */,
 				3BD7B73D2B892B7F005AACB0 /* SplashViewModel.swift in Sources */,
+				3B71BE262BA9B47500A4C460 /* TermsAndConditions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

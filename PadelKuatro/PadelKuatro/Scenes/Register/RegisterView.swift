@@ -15,65 +15,79 @@ struct RegisterView: View {
     @FocusState private var passwordIsFocused: Bool
     @FocusState private var confirmPasswordIsFocused: Bool
 
+    @State var termsAccepted: Bool = false
+
     let screenHeight = UIScreen.main.bounds.height
     let screenwidth = UIScreen.main.bounds.width
 
     var body: some View {
-        ZStack {
-            Rectangle()
-                .fill(.black)
-                .ignoresSafeArea()
-                .opacity(0.8)
-            VStack {
-                HStack {
+        NavigationView {
+            ZStack {
+                Rectangle()
+                    .fill(.black)
+                    .ignoresSafeArea()
+                    .opacity(0.8)
+                VStack {
+                    HStack {
+                        Button {
+                            viewModel.navigateToLogin()
+                        } label: {
+                            Image(systemName: "chevron.left")
+                        }.padding(.leading, screenwidth / -5)
+
+                        Text("register_title")
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(.red)
+                    }
+                    Form {
+                        Section{
+                            TextField("register_email", text: $viewModel.email)
+                        }
+                        .focused($emailIsFocused)
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
+                        .keyboardType(.emailAddress)
+
+                        Section{
+                            TextField("register_password", text: $viewModel.password)
+                        }
+                        .focused($passwordIsFocused)
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
+
+                        Section{
+                            TextField("register_confirm_password", text: $viewModel.confirmPassword)
+                        }
+                        .focused($confirmPasswordIsFocused)
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
+                    }
+                    .scrollDisabled(true)
+                    .padding(.vertical, 10)
+                    .scrollContentBackground(.hidden)
+                    .background(Color.clear.ignoresSafeArea())
+                    NavigationLink(destination: TermsAndConditions(termsAccepted: $termsAccepted)) {
+                        Text("register_terms_and_conditions")
+                            .padding()
+                            .background(termsAccepted ? Color.gray : Color.blue)
+                            .foregroundColor(.white)
+                            .cornerRadius(8)
+                    }.disabled(termsAccepted)
+
                     Button {
-                        viewModel.navigateToLogin()
-                    } label: {
-                        Image(systemName: "chevron.left")
-                    }.padding(.leading, screenwidth / -5)
-
-                    Text("register_title".localized)
-                        .font(.title)
-                        .bold()
-                        .foregroundColor(.red)
-                }
-                Form {
-                    Section{
-                        TextField("register_email".localized, text: $viewModel.email)
+                        print("register clicked")
                     }
-                    .focused($emailIsFocused)
-                    .autocapitalization(.none)
-                    .autocorrectionDisabled()
-                    .keyboardType(.emailAddress)
-                    
-                    Section{
-                        TextField("register_password".localized, text: $viewModel.password)
-                    }
-                    .focused($passwordIsFocused)
-                    .autocapitalization(.none)
-                    .autocorrectionDisabled()
-
-                    Section{
-                        TextField("register_confirm_password".localized, text: $viewModel.confirmPassword)
-                    }
-                    .focused($confirmPasswordIsFocused)
-                    .autocapitalization(.none)
-                    .autocorrectionDisabled()
-                }
-                .scrollDisabled(true)
-                .padding(.vertical, 10)
-                .scrollContentBackground(.hidden)
-                .background(Color.clear.ignoresSafeArea())
-                Button {
-
-                }
                 label: {
-                    Text("register_register_button_title".localized)
+                    Text("register_register_button_title")
                 }
+                .disabled(!termsAccepted)
                 .buttonStyle(RoundedButton(color: Constants.Colors.purpleButton))
                 .padding(.bottom, 20)
-            }.onTapGesture {
-                setFocusedFieldsOff()
+                }
+                .onTapGesture {
+                    setFocusedFieldsOff()
+                }
             }
         }
     }

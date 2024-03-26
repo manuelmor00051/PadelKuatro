@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B6396912BB2DB600092064C /* LogInAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6396902BB2DB600092064C /* LogInAlert.swift */; };
 		3B6E04CD2B989925005B4357 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3B6E04CF2B989925005B4357 /* Localizable.strings */; };
 		3B6E04D22B98F173005B4357 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E04D12B98F173005B4357 /* RegisterView.swift */; };
 		3B6E04D42B98F198005B4357 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E04D32B98F198005B4357 /* RegisterViewModel.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B6396902BB2DB600092064C /* LogInAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInAlert.swift; sourceTree = "<group>"; };
 		3B6E04CE2B989925005B4357 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3B6E04D12B98F173005B4357 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		3B6E04D32B98F198005B4357 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -126,9 +128,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B63968F2BB2DB3C0092064C /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				3B6396902BB2DB600092064C /* LogInAlert.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
 		3B6E04C32B988CCA005B4357 /* Localizable */ = {
 			isa = PBXGroup;
 			children = (
+				3B63968F2BB2DB3C0092064C /* Alerts */,
 				3B6E04CF2B989925005B4357 /* Localizable.strings */,
 			);
 			path = Localizable;
@@ -410,6 +421,7 @@
 				3BD7B7312B892913005AACB0 /* BaseViewModel.swift in Sources */,
 				3BD7B7362B892A0C005AACB0 /* MainCoordinator.swift in Sources */,
 				3BD7B7552B89E3B2005AACB0 /* View+.swift in Sources */,
+				3B6396912BB2DB600092064C /* LogInAlert.swift in Sources */,
 				3BD7B7532B89DD8D005AACB0 /* LoginViewModel.swift in Sources */,
 				3B6E04DD2B9B8208005B4357 /* RememberPasswordView.swift in Sources */,
 				3BD7B7512B89DD7A005AACB0 /* LoginView.swift in Sources */,

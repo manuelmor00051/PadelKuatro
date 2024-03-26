@@ -76,7 +76,7 @@ struct RegisterView: View {
                     }.disabled(termsAccepted)
 
                     Button {
-                        print("register clicked")
+                        viewModel.registerUser()
                     }
                 label: {
                     Text("register_register_button_title")
@@ -84,6 +84,9 @@ struct RegisterView: View {
                 .disabled(!termsAccepted)
                 .buttonStyle(RoundedButton(color: Constants.Colors.purpleButton))
                 .padding(.bottom, 20)
+                .alert(isPresented: $viewModel.showLoginAlert) {
+                    ShowAlert().show(alert: viewModel.alert ?? .notMatchPassword, completion: viewModel.getCoordinator()!.navigateToLogin)
+                }
                 }
                 .onTapGesture {
                     setFocusedFieldsOff()

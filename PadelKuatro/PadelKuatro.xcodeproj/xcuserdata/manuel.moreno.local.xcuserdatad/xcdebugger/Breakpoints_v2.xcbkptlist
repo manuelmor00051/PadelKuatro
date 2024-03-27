@@ -3,4 +3,70 @@
    uuid = "8094362F-2AE6-4DFA-AD01-AD97CF0A62CE"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C01700A9-B692-425D-932A-EC281BE2E3A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PadelKuatro/Scenes/Login/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "login()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C01700A9-B692-425D-932A-EC281BE2E3A7 - 4aba5b3836d251a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PadelKuatro.LoginViewModel.login() -&gt; ()"
+                  moduleName = "PadelKuatro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manuel.moreno.local/Desktop/Projects/PadelKuatro/PadelKuatro/PadelKuatro/Scenes/Login/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "760">
+               </Location>
+               <Location
+                  uuid = "C01700A9-B692-425D-932A-EC281BE2E3A7 - 4aba5b3836d251a6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in PadelKuatro.LoginViewModel.login() -&gt; ()"
+                  moduleName = "PadelKuatro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manuel.moreno.local/Desktop/Projects/PadelKuatro/PadelKuatro/PadelKuatro/Scenes/Login/LoginViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "668">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "219A1E71-AD74-4566-A94F-7396A994AF74"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PadelKuatro/Scenes/Login/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "sendConfirmationEmail()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

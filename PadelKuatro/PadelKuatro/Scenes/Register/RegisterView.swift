@@ -50,14 +50,14 @@ struct RegisterView: View {
                         .keyboardType(.emailAddress)
 
                         Section{
-                            TextField("register_password", text: $viewModel.password)
+                            SecureField("register_password", text: $viewModel.password)
                         }
                         .focused($passwordIsFocused)
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
 
                         Section{
-                            TextField("register_confirm_password", text: $viewModel.confirmPassword)
+                            SecureField("register_confirm_password", text: $viewModel.confirmPassword)
                         }
                         .focused($confirmPasswordIsFocused)
                         .autocapitalization(.none)

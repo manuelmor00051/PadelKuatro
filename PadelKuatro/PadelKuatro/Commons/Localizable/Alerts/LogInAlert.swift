@@ -14,6 +14,9 @@ enum LogInAlertType {
     case wronLogIn
     case emptyEmailOrPassword
     case successSingUp
+    case successRememberPassword
+    case rememberPasswordError
+    case notAnUser
 }
 
 class ShowAlert {
@@ -31,6 +34,12 @@ class ShowAlert {
             return Alert(title: Text("Error"), message: Text("Rellene los campos de email y contraseña"), dismissButton: .default(Text("Aceptar")))
         case .successSingUp:
             return Alert(title: Text(""), message: Text("Usuario creado correctamente"), dismissButton: .default(Text("Aceptar"), action: completion))
+        case .successRememberPassword:
+            return Alert(title: Text(""), message: Text("Correo enviado con éxito"), dismissButton: .default(Text("Aceptar"), action: completion))
+        case .rememberPasswordError:
+            return Alert(title: Text("Error"), message: Text("No hemos podido enviar el correo"), dismissButton: .default(Text("Aceptar")))
+        case .notAnUser:
+            return Alert(title: Text("Error"), message: Text("No existe ningún usuario con este email"), dismissButton: .default(Text("Aceptar")))
         }
     }
 }

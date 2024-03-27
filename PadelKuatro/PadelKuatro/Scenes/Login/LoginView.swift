@@ -57,9 +57,12 @@ struct LoginView: View {
                 .background(Color.clear.ignoresSafeArea())
                 if !anyIsFocused {
                     Button("login_button_title".localized) {
-
+                        viewModel.login()
                     }
                     .buttonStyle(RoundedButton(color: Constants.Colors.purpleButton))
+                    .alert(isPresented: $viewModel.showAlert, content: {
+                        ShowAlert().show(alert: viewModel.alertType ?? .notAnUser, completion: viewModel.alertType == .notemailverified ? viewModel.sendConfirmationEmail : nil)
+                    })
                     Button("login_register_button_title".localized) {
                         viewModel.navigateToRegister()
                     }

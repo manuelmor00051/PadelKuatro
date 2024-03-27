@@ -24,6 +24,9 @@ class RegisterViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObjec
             if password == confirmPassword && password.count > Constants.Defaults.passwordLength {
                 Auth.auth().createUser(withEmail: email, password: password) { [weak self] (result, error) in
                     if let _ = result, error == nil {
+                        Auth.auth().currentUser?.sendEmailVerification { error in
+                            print(error)
+                        }
                         self?.alert = .successSingUp
                         self?.showLoginAlert = true
                     } else {

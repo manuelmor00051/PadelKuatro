@@ -17,10 +17,12 @@ enum LogInAlertType {
     case successRememberPassword
     case rememberPasswordError
     case notAnUser
+    case notemailverified
+    case emailVerificatorError
 }
 
 class ShowAlert {
-    func show(alert: LogInAlertType, completion: @escaping () -> Void) -> Alert {
+    func show(alert: LogInAlertType, completion: (() -> Void)?) -> Alert {
         switch alert {
         case .wrongEmail:
             return Alert(title: Text("Error"), message: Text("Introduce un email válido"), dismissButton: .default(Text("Aceptar")))
@@ -40,6 +42,10 @@ class ShowAlert {
             return Alert(title: Text("Error"), message: Text("No hemos podido enviar el correo"), dismissButton: .default(Text("Aceptar")))
         case .notAnUser:
             return Alert(title: Text("Error"), message: Text("No existe ningún usuario con este email"), dismissButton: .default(Text("Aceptar")))
+        case .notemailverified:
+            return Alert(title: Text("Email no verificado"), message: Text("Su email no está verificado, por favor verifíquelo. Si necesita que se le envie un nuevo correo pulse enviar"), primaryButton: .default(Text("Aceptar")), secondaryButton: .default(Text("Enviar"), action: completion))
+        case .emailVerificatorError:
+            return Alert(title: Text("Error"), message: Text("error al enviar el correo de verificación, inténtelo de nuevo más tarde"), dismissButton: .default(Text("Aceptar")))
         }
     }
 }

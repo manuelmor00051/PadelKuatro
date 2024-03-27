@@ -11,6 +11,7 @@ protocol MainCoordinatorProtocol: BaseCoordinatorProtocol {
     func navigateToLogin()
     func navigateToRegister()
     func navigateToRememberPassword()
+    func navigateToHome()
 }
 
 class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
@@ -21,6 +22,7 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
     @Published private(set) var loginViewModel: LoginViewModel!
     @Published private(set) var registerViewModel: RegisterViewModel!
     @Published private(set) var rememberPasswordViewModel: RememberPasswordViewModel!
+    @Published private(set) var homeViewModel: HomeViewModel!
 
     @Published var loginIsActive: Bool = false {
         didSet {
@@ -46,6 +48,14 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
         }
     }
 
+    @Published var homeIsAtive: Bool = false {
+        didSet {
+            if !homeIsAtive {
+                homeViewModel = nil
+            }
+        }
+    }
+
     // MARK: Init
 
     override init() {
@@ -64,6 +74,7 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
         loginIsActive = true
         registerIsActive = false
         rememberPasswordIsActive = false
+        homeIsAtive = false
     }
 
     func navigateToRegister() {
@@ -71,6 +82,7 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
         registerIsActive = true
         loginIsActive = false
         rememberPasswordIsActive = false
+        homeIsAtive = false
     }
 
     func navigateToRememberPassword() {
@@ -78,5 +90,14 @@ class MainCoordinator: BaseCoordinator, MainCoordinatorProtocol {
         rememberPasswordIsActive = true
         registerIsActive = false
         loginIsActive = false
+        homeIsAtive = false
+    }
+
+    func navigateToHome() {
+        homeViewModel = DependencyInjector.shared.getHomeViewModel(coordinator: self)
+        homeIsAtive = true
+        loginIsActive = false
+        registerIsActive = false
+        rememberPasswordIsActive = false
     }
 }

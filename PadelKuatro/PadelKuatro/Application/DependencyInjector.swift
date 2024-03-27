@@ -26,4 +26,8 @@ internal class DependencyInjector {
     func getRememberPasswordViewModel(coordinator: MainCoordinatorProtocol) -> RememberPasswordViewModel {
         RememberPasswordViewModel(coordinator: coordinator)
     }
+
+    func getHomeViewModel(coordinator: MainCoordinatorProtocol) -> HomeViewModel {
+        HomeViewModel(coordinator: coordinator)
+    }
 }

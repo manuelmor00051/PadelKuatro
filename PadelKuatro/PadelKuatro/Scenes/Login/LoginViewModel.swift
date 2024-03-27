@@ -41,7 +41,7 @@ class LoginViewModel: BaseViewModel<MainCoordinatorProtocol>, ObservableObject {
     }
 
     private func navigateToHome() {
-        // TODO: - Navigate to home
+        self.getCoordinator()?.navigateToHome()
     }
 
     func sendConfirmationEmail() {

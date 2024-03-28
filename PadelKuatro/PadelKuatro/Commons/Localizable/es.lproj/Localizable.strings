@@ -32,6 +32,11 @@
 "rememberPassword_description" = "Introduce tu email, pulse el botón Recuperar contraseña y le enviaremos un correo con el enlace con los pasos a seguir para restablecer la contraseña.";
 "rememberPassword_resetPassword" = "Restablecer contraseña";
 
+// MARK: - Schedule Screen
+
+"schedule_tournamet" = "Torneo";
+"schedule_vacations" = "Vacaciones";
+
 // MARK: - Terms and conditions
 
 "terms_and_conditions_description" = "Fecha de última actualización: [Fecha]

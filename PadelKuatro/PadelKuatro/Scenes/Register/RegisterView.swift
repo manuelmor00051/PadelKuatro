@@ -11,6 +11,8 @@ struct RegisterView: View {
 
     @ObservedObject var viewModel: RegisterViewModel
 
+    @FocusState private var userNameIsFocused: Bool
+    @FocusState private var lastnameIsFocused: Bool
     @FocusState private var emailIsFocused: Bool
     @FocusState private var passwordIsFocused: Bool
     @FocusState private var confirmPasswordIsFocused: Bool
@@ -19,6 +21,14 @@ struct RegisterView: View {
 
     let screenHeight = UIScreen.main.bounds.height
     let screenwidth = UIScreen.main.bounds.width
+
+    var anyIsFocused: Bool {
+        if userNameIsFocused || emailIsFocused || passwordIsFocused || confirmPasswordIsFocused {
+            true
+        } else {
+            false
+        }
+    }
 
     var body: some View {
         NavigationView {
@@ -42,6 +52,20 @@ struct RegisterView: View {
                     }
                     Form {
                         Section{
+                            TextField("register_userName", text: $viewModel.userName)
+                        }
+                        .focused($userNameIsFocused)
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
+
+                        Section{
+                            TextField("register_lastname", text: $viewModel.lastname)
+                        }
+                        .focused($lastnameIsFocused)
+                        .autocapitalization(.none)
+                        .autocorrectionDisabled()
+
+                        Section{
                             TextField("register_email", text: $viewModel.email)
                         }
                         .focused($emailIsFocused)
@@ -63,30 +87,34 @@ struct RegisterView: View {
                         .autocapitalization(.none)
                         .autocorrectionDisabled()
                     }
-                    .scrollDisabled(true)
                     .padding(.vertical, 10)
                     .scrollContentBackground(.hidden)
                     .background(Color.clear.ignoresSafeArea())
-                    NavigationLink(destination: TermsAndConditions(termsAccepted: $termsAccepted)) {
-                        Text("register_terms_and_conditions")
-                            .padding()
-                            .background(termsAccepted ? Color.gray : Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(8)
-                    }.disabled(termsAccepted)
+                    if !anyIsFocused {
+                        NavigationLink(destination: TermsAndConditions(termsAccepted: $termsAccepted)) {
+                            Text("register_terms_and_conditions")
+                                .padding()
+                                .background(termsAccepted ? Color.gray : Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(8)
+                        }.disabled(termsAccepted)
 
-                    Button {
-                        viewModel.registerUser()
+                        Button {
+                            if termsAccepted {
+                                viewModel.registerUser()
+                            } else {
+                                viewModel.termsNotAccepted()
+                            }
+                        }
+                    label: {
+                        Text("register_register_button_title")
                     }
-                label: {
-                    Text("register_register_button_title")
-                }
-                .disabled(!termsAccepted)
-                .buttonStyle(RoundedButton(color: Constants.Colors.purpleButton))
-                .padding(.bottom, 20)
-                .alert(isPresented: $viewModel.showLoginAlert) {
-                    ShowAlert().show(alert: viewModel.alert ?? .notMatchPassword, completion: viewModel.getCoordinator()!.navigateToLogin)
-                }
+                    .buttonStyle(RoundedButton(color: Constants.Colors.purpleButton))
+                    .padding(.bottom, 20)
+                    .alert(isPresented: $viewModel.showLoginAlert) {
+                        ShowAlert().show(alert: viewModel.alert ?? .notMatchPassword, completion: viewModel.getCoordinator()!.navigateToLogin)
+                    }
+                    }
                 }
                 .onTapGesture {
                     setFocusedFieldsOff()
@@ -96,6 +124,8 @@ struct RegisterView: View {
     }
 
     func setFocusedFieldsOff() {
+        userNameIsFocused = false
+        lastnameIsFocused = false
         emailIsFocused = false
         passwordIsFocused = false
         confirmPasswordIsFocused = false

@@ -19,6 +19,8 @@ enum LogInAlertType {
     case notAnUser
     case notemailverified
     case emailVerificatorError
+    case termsNotAccepted
+    case emptyFields
 }
 
 class ShowAlert {
@@ -35,7 +37,7 @@ class ShowAlert {
         case .emptyEmailOrPassword:
             return Alert(title: Text("Error"), message: Text("Rellene los campos de email y contraseña"), dismissButton: .default(Text("Aceptar")))
         case .successSingUp:
-            return Alert(title: Text(""), message: Text("Usuario creado correctamente"), dismissButton: .default(Text("Aceptar"), action: completion))
+            return Alert(title: Text(""), message: Text("Usuario creado correctamente, le hemos enviado un email de verificación a su correo"), dismissButton: .default(Text("Aceptar"), action: completion))
         case .successRememberPassword:
             return Alert(title: Text(""), message: Text("Correo enviado con éxito"), dismissButton: .default(Text("Aceptar"), action: completion))
         case .rememberPasswordError:
@@ -46,6 +48,10 @@ class ShowAlert {
             return Alert(title: Text("Email no verificado"), message: Text("Su email no está verificado, por favor verifíquelo. Si necesita que se le envie un nuevo correo pulse enviar"), primaryButton: .default(Text("Aceptar")), secondaryButton: .default(Text("Enviar"), action: completion))
         case .emailVerificatorError:
             return Alert(title: Text("Error"), message: Text("error al enviar el correo de verificación, inténtelo de nuevo más tarde"), dismissButton: .default(Text("Aceptar")))
+        case .termsNotAccepted:
+            return Alert(title: Text("Términos y condiciones no aceptados"), message: Text("Para continuar debes aceptar los términos y condiciones"), dismissButton: .default(Text("Aceptar")))
+        case .emptyFields:
+            return Alert(title: Text("Error"), message: Text("Debe rellenar todos los campos"), dismissButton: .default(Text("Aceptar")))
         }
     }
 }
